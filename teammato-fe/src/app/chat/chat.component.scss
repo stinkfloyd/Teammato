@@ -1,0 +1,78 @@
+.chatbox {
+  overflow: scroll;
+  padding: .5em;
+  height: 20vh;
+  font-family: 'Lucida Sans Unicode';
+  font-size: 15px;
+}
+
+#whole {
+  background: white;
+  margin-bottom: 3em;
+}
+
+#chatbox-body::-webkit-scrollbar {
+  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+
+#whole {
+  border: 2px solid #0f3340;
+  width: 95%;
+  border-radius: 2em;
+}
+
+#chatbar {
+  width: 100%;
+}
+
+input {
+  width: 85%;
+  font-size: 15px;
+  font-family: 'Lucida Sans Unicode';
+}
+
+form {
+  padding: 3px;
+  margin: 3px;
+}
+
+button {
+  margin-left: 3px;
+  width: 8em;
+}
+
+.chattext {
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.head {
+  border-bottom: 2px solid #0f3340;
+  background-color: #0f3340;
+  color: white;
+  border-top-left-radius: 1.25em;
+  border-top-right-radius: 1.25em;
+}
+
+.headText {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3px;
+}
+
+.username {
+  color: #0f3340;
+  font-weight: bolder;
+}
+
+.btn-success {
+  background-color: #0f3340 !important;
+  font-family: 'Lucida Sans Unicode' !important;
+  font-size: 15px;
+  letter-spacing: 3px;
+
+}

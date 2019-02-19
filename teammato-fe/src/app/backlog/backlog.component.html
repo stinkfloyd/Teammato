@@ -1,0 +1,50 @@
+<div class="container goals" id="backlog">
+  <h1 id="head"><strong>Goal Backlog</strong>
+    <button *ngIf="!edit" class="btn btn-primary plusbtn" (click)="onClick()"><strong>Add Goal</strong></button>
+    <button *ngIf="edit" class="btn btn-danger plusbtn" (click)="onClick()"><strong>x</strong></button></h1>
+  <div class="goalScroll">
+    <div id="goalEdit" *ngIf="edit">
+      <app-create-goal [teamID]="teamID" [username]="username" (onGoalSubmit)="getGoals()"></app-create-goal>
+    </div>
+
+    <div *ngFor="let goal of backlog">
+      <div class="card animated bounceIn" *ngIf="!goal.accepted">
+        <div class="card-body">
+          <ngb-accordion [closeOthers]="true">
+            <ngb-panel id={{goal.id}}>
+              <ng-template ngbPanelTitle>
+                <div class="row" class="goalTitle">
+                  <div class="col-sm-6">
+                    <span><b>{{goal.title}}</b></span>
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="priority">Priority:<span class="stars">
+                        <ngb-rating [rate]="goal.rate"></ngb-rating>
+                      </span></span>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <div class="row">
+                  <div class="col-sm-8 goalInfo">
+                    <p class="card-text"><strong>-</strong>{{goal.desc}}</p>
+                    <p class="card-text">Added by: {{goal.creator | titlecase}}</p>
+                  </div>
+                  <div class="col-sm-4 buttonDiv">
+                    <div>
+                      <i class="fas fa-check-square" id={{goal.id}} (click)="acceptGoal($event)"></i>
+                    </div>
+                    <div>
+                      <i *ngIf="username === creator || username === goal.creator" class="fas fa-trash" id={{goal.id}}
+                        (click)="removeGoal($event)"></i>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

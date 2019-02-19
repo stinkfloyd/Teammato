@@ -1,0 +1,35 @@
+<div class="container goals" id="completed">
+  <h1 id="head"><strong>Completed Goals</strong></h1>
+  <div class="goalScroll">
+    <div *ngFor="let goal of completed">
+      <div class="card animated bounceIn" *ngIf="goal.accepted && goal.completed">
+        <div class="card-body">
+          <ngb-accordion>
+            <ngb-panel id={{goal.id}}>
+              <ng-template ngbPanelTitle>
+                <span><b>{{goal.title}}</b></span>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <div class="row">
+                  <div class="col-sm-8 goalInfo">
+                    <p class="card-text"><strong>-</strong>{{goal.desc}}</p>
+                    <p class="card-text">Completed by: {{goal.completedBy | titlecase}}</p>
+                  </div>
+                  <div class="col-sm-4 buttonDiv">
+                    <div>
+                      <i *ngIf="username === creator" class="fas fa-trash" id={{goal.id}} (click)="removeGoal($event)"></i>
+                    </div>
+                    <div>
+                      <i *ngIf="username === creator || username === goal.completedBy" class="fas fa-undo" id={{goal.id}}
+                        (click)="unCompleteGoal($event)"></i>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

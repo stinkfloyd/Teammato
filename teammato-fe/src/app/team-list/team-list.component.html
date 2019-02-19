@@ -1,0 +1,14 @@
+<div class="head">
+  <div>Welcome {{user.username | titlecase}}!</div>
+</div>
+<div class="teamInfo">
+  Please select from your teams below. You may also create or join a team from the Team Options menu above.
+</div>
+<div class="row teams">
+  <div class="col-sm-6">
+    <app-created-teams></app-created-teams>
+  </div>
+  <div class="col-sm-6">
+    <app-joined-teams></app-joined-teams>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.navbar {
+  border-radius: 0em !important;
+  z-index: 9999999999999999;
+  font-size: 15px;
+  background: #0F3340 !important;
+  color: #53CCF9 !important;
+  width: 100%;
+}
+
+.navButtons {
+  cursor: pointer;
+  user-select: none;
+}
+
+.nav-link {
+  width: auto;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.brandName {
+  font-size: 30px;
+}

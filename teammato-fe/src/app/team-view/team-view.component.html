@@ -1,0 +1,5 @@
+<app-chat [teamName]="team.name" [username]="team.username"></app-chat>
+<h1 class="goalHead">Team {{team.name}}'s Goal Log</h1>
+<div class="goalView">
+  <app-goals [creator]="team.creator_username" [username]="team.username" [teamID]="id"></app-goals>
+</div>

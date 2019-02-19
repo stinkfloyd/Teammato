@@ -1,0 +1,25 @@
+<div class="container-fluid" id="whole">
+  <div class="row head" id="head">
+    <h1 class="box-title headText">Team {{teamName}} Chat</h1>
+    <div class="bottomBorder"></div>
+  </div>
+  <div class="row chatbox" id="chatbox">
+    <div class="col-md-12 pull-left">
+      <div id="chatbox-body">
+        <!-- Conversations are loaded here -->
+        <div *ngFor="let message of messages" class="col-12-sm">
+          <div class="chattext">
+            <span class="username"><strong>{{message.user | titlecase}}</strong></span>({{message.timestamp |
+            date:'MM/dd/yyyy@h:mma'}}):
+            {{message.message}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="input-group">
+    <form id="chatbar" name="chatInput" (ngSubmit)="sendMessage()">
+      <input id="m" autocomplete="off" [(ngModel)]="message" name="message" /><button class="btn btn-success" type="submit">Send</button>
+    </form>
+  </div>
+</div>

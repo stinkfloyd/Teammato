@@ -1,0 +1,104 @@
+.container-fluid {
+  border: 2px solid #0f3340;
+  margin: auto;
+  padding: 0%;
+  width: 95%;
+  border-bottom-left-radius: 2.25%;
+  border-bottom-right-radius: 2.25%;
+  margin-bottom: 3em;
+}
+
+.goals {
+  object-fit: contain;
+  margin: none !important;
+  padding: none !important;
+  width: 100%;
+  padding-right: none !important;
+  padding-left: none !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.goalScroll {
+  height: 300px;
+  overflow: scroll;
+  background: white;
+  object-fit: contain !important;
+  background-color: #0F3340 !important;
+  font-size: 25px;
+}
+
+.plusbtn {
+  background-color: #0F3340;
+  font-size: .5em;
+}
+
+#head {
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+#goalEdit {
+  border-bottom: 2px solid black;
+  padding: 15px;
+}
+
+#goalDiv {
+  width: auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+}
+
+.buttonDiv {
+  overflow: visible;
+  display: block;
+  padding-right: -2%;
+}
+
+.card-body {
+  object-fit: contain;
+  margin: none !important;
+  padding: none !important;
+  width: 100%;
+  padding-right: none !important;
+  padding-left: none !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  font-family: 'Lucida Sans Unicode';
+
+}
+
+.card-title {
+  font-size: 22px;
+}
+
+.card-text {
+  font-size: 18px;
+}
+
+.fas {
+  font-size: px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: .25em;
+}
+
+.goalContainer {
+  width: 33%;
+  margin: 2%;
+}
+
+.workingRow {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.completedRow {
+  margin-bottom: 5em;
+  text-align: center;
+  width: 500px;
+  margin-left: 25%;
+}

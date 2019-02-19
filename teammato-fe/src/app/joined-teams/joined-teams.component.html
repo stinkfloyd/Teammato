@@ -1,0 +1,7 @@
+<h1><strong>Teams Joined</strong></h1>
+<ul class="joinedTeams">
+  <li *ngFor="let joinedTeam of joinedTeamsList">
+    <button routerLink="/teamView/{{joinedTeam.id}}" id={{joinedTeam.id}}>{{joinedTeam.name |
+      titlecase}}</button>
+  </li>
+</ul>

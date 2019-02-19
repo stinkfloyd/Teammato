@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row workingRow">
+    <div class="col-sm-6">
+      <app-backlog class="backlog" [teamID]="teamID" [username]="username" [creator]="creator" [backlog]="backlog"
+        (newGoalEmit)="acceptGoal($event)" (deleteGoalEmit)="removeGoal($event)"></app-backlog>
+    </div>
+    <div class="col-sm-6">
+      <app-accepted class="accepted" [teamID]="teamID" [username]="username" [creator]="creator" [accepted]="accepted"
+        (completeGoalEmit)="completeGoal($event)" (unCompleteGoalEmit)="unCompleteGoal($event)" (deleteGoalEmit)="removeGoal($event)"></app-accepted>
+    </div>
+  </div>
+  <div class="row completedRow">
+    <div class="col-sm-12">
+      <app-completed class="completed" [teamID]="teamID" [username]="username" [creator]="creator" [completed]="completed"
+        (unCompleteGoalEmit)="unCompleteGoal($event)" (deleteGoalEmit)="removeGoal($event)"></app-completed>
+    </div>
+  </div>
+</div>

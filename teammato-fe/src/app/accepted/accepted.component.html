@@ -1,0 +1,50 @@
+<div class="container goals" id="accepted">
+  <h1 id="head"><strong>Accepted Goals</strong></h1>
+  <div class="goalScroll">
+
+    <div *ngFor="let goal of accepted">
+      <div class="card animated bounceIn" *ngIf="goal.accepted && !goal.completed">
+        <div class="card-body">
+          <ngb-accordion>
+            <ngb-panel class="accordion" id={{goal.id}}>
+              <ng-template ngbPanelTitle>
+                <div class="row goalTitle">
+                  <div class="col-sm-6">
+                    <span><b>{{goal.title}}</b></span>
+                  </div>
+                  <div class="col-sm-6">
+                    <span class="priority">Priority:<span class="stars">
+                        <ngb-rating [rate]="goal.rate"></ngb-rating>
+                      </span></span>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template ngbPanelContent>
+                <div class="row">
+                  <div class="col-sm-8 goalInfo">
+                    <p class="card-text"><strong>-</strong>{{goal.desc}}</p>
+                    <p class="card-text">Accepted by: {{goal.acceptedBy | titlecase}}</p>
+
+                  </div>
+                  <div class="col-sm-4 buttonDiv">
+                    <div>
+                      <i *ngIf="username === creator || username === goal.acceptedBy" class="fas fa-check-square" id={{goal.id}}
+                        (click)="completeGoal($event)"></i>
+                    </div>
+                    <div>
+                      <i *ngIf="username === creator" class="fas fa-trash" id={{goal.id}} (click)="removeGoal($event)"></i>
+                    </div>
+                    <div>
+                      <i *ngIf="username === creator || username === goal.acceptedBy" class="fas fa-undo" id={{goal.id}}
+                        (click)="unCompleteGoal($event)"></i>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </ngb-panel>
+          </ngb-accordion>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

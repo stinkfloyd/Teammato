@@ -1,0 +1,8 @@
+<h1><strong>Teams Created</strong></h1>
+<ul class="createdTeams">
+  <div *ngFor="let createdTeam of createdTeamsList">
+    <div class='teamButton' routerLink="/teamView/{{createdTeam.id}}" id={{createdTeam.id}}>&#8226;{{createdTeam.name |
+      titlecase}}
+    </div>
+  </div>
+</ul>

@@ -1,0 +1,82 @@
+#backlog {
+  font-family: 'Lucida Sans Unicode';
+  font-size: 13px;
+}
+
+h1 {
+  font-family: "Cinzel";
+  letter-spacing: .2em;
+}
+
+
+b {
+  font-size: 15px;
+  color: #0f3340;
+  font-family: 'Lucida Sans Unicode';
+}
+
+
+.priority {
+  font-size: 15px;
+
+}
+
+.goalInfo {
+  font-size: 15px;
+  font-family: "Lucida Sans Unicode";
+  text-align: center;
+}
+
+.stars {
+  color: gold;
+}
+
+.rating {
+  margin-left: 15px;
+}
+
+.goalTitle {
+  color: #0f3340;
+}
+
+.fas {
+  font-size: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: .25em;
+}
+
+.fa-trash:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.fa-trash:active {
+  animation: wobble .5s linear;
+}
+
+.fa-check-square:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.fa-check-square:active {
+  animation: wobble .5s linear;
+}
+
+.fa-undo:hover {
+  color: gold;
+  cursor: pointer;
+}
+
+.fa-undo:active {
+  animation: wobble .5s linear;
+}
+
+.plusbtn {
+  font-family: 'Lucida Sans Unicode';
+  font-size: 13px;
+  color: white;
+  background-color: #0f3340;
+  margin-left: 5em;
+}

@@ -1,0 +1,74 @@
+.logo {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 12em;
+  letter-spacing: .125em;
+  animation: zoomIn 1s linear;
+}
+
+.t {
+  animation: shinyName .1s infinite;
+  animation-delay: 1s;
+  animation-duration: 7s;
+}
+
+.e {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.1s;
+  animation-duration: 7s;
+}
+
+.a {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.2s;
+  animation-duration: 7s;
+}
+
+.m {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.3s;
+  animation-duration: 7s;
+}
+
+.m2 {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.4s;
+  animation-duration: 7s;
+}
+
+.a2 {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.5s;
+  animation-duration: 7s;
+}
+
+.t2 {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.6s;
+  animation-duration: 7s;
+}
+
+.o {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.7s;
+  animation-duration: 7s;
+}
+
+@keyframes shinyName {
+  0% {
+    opacity: .2;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.sloganText {
+  font-size: 20px;
+  letter-spacing: .25em;
+}
