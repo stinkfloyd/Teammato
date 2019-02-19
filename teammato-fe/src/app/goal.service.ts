@@ -65,7 +65,6 @@ export class GoalService {
   deleteGoal(id): Observable<any> {
     return this.http.delete<any>(`${baseAPI}/goal/${id}`, { withCredentials: true }).pipe(
       tap((result) => {
-        console.log("result: ", result)
         this.socket.sendGoalDeleted(result)
         return result
       })

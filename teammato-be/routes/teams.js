@@ -1,10 +1,7 @@
 require('dotenv').config()
 const express = require('express')
-const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const user = require('../models/user')
 const teams = require('../models/teams')
-const validation = require('../models/validation')
 
 const router = express.Router()
 
@@ -26,18 +23,15 @@ const jwtVerify = (req, res, next) => {
 }
 // Creates a team
 router.post('/', jwtVerify, (req, res, next) => {
-  console.log("req.payload: ", req.payload)
   const newTeam = {
     name: req.body.name.toLowerCase(),
     creator: req.payload.id,
     creator_username: req.payload.username.toLowerCase()
   }
-  console.log("newTeam:", newTeam)
   teams.create(newTeam).then((response) => {
     if (!response) {
       return next(response)
     } else {
-      console.log("yo")
       req.team = response
       return addOwnerToTeam(req, res, next)
     }

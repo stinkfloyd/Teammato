@@ -28,7 +28,6 @@ export class ChatComponent implements OnInit {
     }
     this.socketService.sendMessage(messageObj)
     this.message = ''
-    console.log('test', this.timestamp)
   }
 
   ngOnInit() {

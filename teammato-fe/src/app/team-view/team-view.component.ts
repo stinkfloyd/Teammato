@@ -25,11 +25,8 @@ export class TeamViewComponent implements OnInit {
   ngOnInit() {
     this.id = parseInt(this.route.snapshot.paramMap.get('id'), 10)
     this.user.getTeam(this.id).subscribe(team => {
-      console.log('team:', team)
       this.team = { ...team }
       this.socketService.sendTeam(team)
-      console.log('team.username: ', team.username)
-      console.log('team.userID', team.userID)
     }, error => {
       this.goTo('teamList')
     })

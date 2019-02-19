@@ -62,28 +62,20 @@ export class GoalsComponent implements OnInit {
   }
 
   acceptGoal = (event) => {
-    console.log('event.target.id: ', event.target.id)
-    console.log('username:', this.username)
     const user = { username: this.username }
     this.goals.acceptGoal(event.target.id, user).subscribe((goal) => {
-      console.log('goal (acceptGoal result): ', goal)
       // this.getGoals()
     })
   }
 
   completeGoal = (event) => {
-    console.log('event.target.id: ', event.target.id)
-    console.log('username:', this.username)
     const user = { username: this.username }
     this.goals.completeGoal(event.target.id, user).subscribe((goal) => {
-      console.log('goal (completeGoal result): ', goal)
       // this.getGoals()
     })
   }
 
   unCompleteGoal = (event) => {
-    console.log('event.target.id: ', event.target.id)
-    console.log('username:', this.username)
     const user = { username: this.username }
     this.goals.unCompleteGoal(event.target.id, user).subscribe((goal) => {
 

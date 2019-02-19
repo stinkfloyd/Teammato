@@ -1,10 +1,7 @@
 require('dotenv').config()
 const express = require('express')
-const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const user = require('../models/user')
 const goals = require('../models/goals')
-const validation = require('../models/validation')
 
 const router = express.Router()
 
@@ -54,30 +51,24 @@ router.get('/:id', jwtVerify, (req, res, next) => {
 
 router.put('/:id', jwtVerify, (req, res, next) => {
   const id = parseInt(req.params.id, 10)
-  console.log("req.body: ", req.body)
 
   goals.acceptGoal(id, req.body.username, next).then((goal) => {
-    console.log("goal(test): ", goal)
     res.send(goal)
   })
 })
 
 router.put('/:id/completed', jwtVerify, (req, res, next) => {
   const id = parseInt(req.params.id, 10)
-  console.log("req.body: ", req.body)
 
   goals.completeGoal(id, req.body.username, next).then((goal) => {
-    console.log("goal(test): ", goal)
     res.send(goal)
   })
 })
 
 router.put('/:id/uncomplete', jwtVerify, (req, res, next) => {
   const id = parseInt(req.params.id, 10)
-  console.log("req.body: ", req.body)
 
   goals.unCompleteGoal(id, req.body.username, next).then((goal) => {
-    console.log("goal(test): ", goal)
     res.send(goal)
   })
 })

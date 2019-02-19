@@ -25,7 +25,6 @@ export class ProfileComponent implements OnInit {
 
   constructor(private http: HttpClient, private profile: ProfileService, public router: Router, private cookie: CookieService) {
     profile.sendUserEvent.subscribe((user) => {
-      console.log('user in profile component: ', user)
       this.user = { ...user }
     })
   }
