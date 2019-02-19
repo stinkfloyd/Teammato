@@ -1,6 +1,7 @@
 # Teammato
 
 - [Live Demo](http://obscure-reaches-16352.herokuapp.com)
+
 ![splash logo](./images/splash.gif)
 
 ## Real Time Team Organization Tool
